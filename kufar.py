@@ -50,7 +50,6 @@ def start():
             if 'item' in x1 and x2.text:
                 x += 1
                 x3 = x2.text + ' -- ' + x1
-                print(x3)
                 try:
                     bot.send_message(CHANNEL, x3, parse_mode='Markdown')
                 except:
@@ -65,3 +64,6 @@ def start_command(CHANNEL):
 
 
 bot.polling(none_stop=True, interval=0)
+
+if '__main__' == 'kufar':
+    start_command()
